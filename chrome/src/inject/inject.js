@@ -5,7 +5,7 @@ chrome.extension.sendMessage({}, function (response) {
 
 			let currId = ''
 
-			console.id(`[tuga.tv_unblock] Scanning page;`)
+			console.log(`[tuga.tv_unblock] Scanning page;`)
 
 			let rows = document.querySelectorAll('.row')
 			for(let i = 0; i < rows.length;){
@@ -13,7 +13,7 @@ chrome.extension.sendMessage({}, function (response) {
 				if(!id.startsWith('vbplayer')){
 					i++
 				} else {
-					console.id(`[tuga.tv_unblock] Style block detected: id: ${currId};`)
+					console.log(`[tuga.tv_unblock] Style block detected`)
 					currId = id.substr(id.length-2, 2)
 					break
 				}
@@ -24,8 +24,8 @@ chrome.extension.sendMessage({}, function (response) {
 			style.innerHTML = `#vbplayer_${currId} {display: none !important;} #vplayer_${currId} {display: block !important;}`;
 			(document.head || document.documentElement).appendChild(style);
 
-			console.id(`[tuga.tv_unblock] Injected style instructions;`)
-			console.id(`[tuga.tv_unblock] Removed block`)
+			console.log(`[tuga.tv_unblock] Injected style instructions;`)
+			console.log(`[tuga.tv_unblock] Removed block`)
 		}
 	}, 10);
 });
