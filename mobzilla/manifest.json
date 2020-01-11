@@ -1,0 +1,14 @@
+{
+    "description": "Esta extensão faz com que o site (tuga.tv) dê premissão de ver o filme mesmo com AdBlock instalado.",
+    "manifest_version": 2,
+    "name": "tuga.tv - unblock",
+    "version": "0.0.1",
+    "icons": {
+        "48": "icons/icon48.png"
+    },
+    "content_scripts": [{
+        "matches": ["*://*.tuga.tv/*"],
+        "js": ["inject.js"]
+    }]
+
+}
