@@ -8,22 +8,13 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "background": {
-    "scripts": [
-      "src/bg/background.js"
-    ],
-    "persistent": true
-  },
-  "permissions": [
-    "https://*.tuga.tv/filme"
-  ],
   "content_scripts": [
     {
       "matches": [
-        "https://*/*"
+        "https://*.tuga.tv/*"
       ],
       "js": [
-        "src/inject/inject.js"
+        "inject.js"
       ]
     }
   ]
