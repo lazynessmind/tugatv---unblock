@@ -16,7 +16,7 @@ for (let i = 0; i < rows.length;) {
 
 var style = document.createElement('style');
 style.type = 'text/css';
-style.innerHTML = `#vbplayer_${currId} {display: none !important;} #vplayer_${currId} {display: block !important;}`;
+style.textContent = `#vbplayer_${currId} {display: none !important;} #vplayer_${currId} {display: block !important;}`;
 (document.head || document.documentElement).appendChild(style);
 
 console.log(`[tuga.tv_unblock] Injected style instructions;`)
